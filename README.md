@@ -104,7 +104,7 @@ datasets
 Once the dataset is ready, new models can be trained with the following commands. For example, 
 
 ```
-python train --config configs/youtube-vos.jon --model sttn 
+python train.py --config configs/youtube-vos.jon --model sttn 
 ```
 
 <!-- ---------------------------------------------- -->
