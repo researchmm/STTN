@@ -47,7 +47,7 @@ _to_tensors = transforms.Compose([
     ToTorchFormatTensor()])
 
 
-# sample reference frames from the whole video 
+# sample reference frames from the whole video
 def get_ref_index(neighbor_ids, length):
     ref_index = []
     for i in range(0, length, ref_length):
@@ -56,12 +56,12 @@ def get_ref_index(neighbor_ids, length):
     return ref_index
 
 
-# read frame-wise masks 
+# read frame-wise masks
 def read_mask(mpath):
     masks = []
     mnames = os.listdir(mpath)
     mnames.sort()
-    for m in mnames: 
+    for m in mnames:
         m = Image.open(os.path.join(mpath, m))
         m = m.resize((w, h), Image.NEAREST)
         m = np.array(m.convert('L'))
@@ -72,7 +72,7 @@ def read_mask(mpath):
     return masks
 
 
-#  read frames from video 
+#  read frames from video
 def read_frame_from_videos(vname):
     frames = []
     vidcap = cv2.VideoCapture(vname)
@@ -83,12 +83,12 @@ def read_frame_from_videos(vname):
         frames.append(image.resize((w,h)))
         success, image = vidcap.read()
         count += 1
-    return frames       
+    return frames
 
 
 def main_worker():
-    # set up models 
-    device = torch.device("cuda:1" if torch.cuda.is_available() else "cpu")
+    # set up models
+    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     net = importlib.import_module('model.' + args.model)
     model = net.InpaintGenerator().to(device)
     model_path = args.ckpt
@@ -97,7 +97,7 @@ def main_worker():
     print('loading from: {}'.format(args.ckpt))
     model.eval()
 
-    # prepare datset, encode all frames into deep space 
+    # prepare dataset, encode all frames into deep space
     frames = read_frame_from_videos(args.video)
     video_length = len(frames)
     feats = _to_tensors(frames).unsqueeze(0)*2-1
