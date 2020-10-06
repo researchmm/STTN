@@ -104,13 +104,13 @@ datasets
 Once the dataset is ready, new models can be trained with the following commands. For example, 
 
 ```
-python train.py --config configs/youtube-vos.jon --model sttn 
+python train.py --config configs/youtube-vos.json --model sttn 
 ```
 
 <!-- ---------------------------------------------- -->
 ## Testing
 
-Testing is similar to [Completing Videos Using Pretrained Model](https://github.com/researchmm/STTN#completing_videos_using_rpetrained_model).
+Testing is similar to [Completing Videos Using Pretrained Model](https://github.com/researchmm/STTN#completing-videos-using-pretrained-model).
 
 ```
 python test.py --video examples/schoolgirls_orig.mp4 --mask examples/schoolgirls  --ckpt checkpoints/sttn.pth 
