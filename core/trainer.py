@@ -50,7 +50,8 @@ class Trainer():
             self.train_dataset,
             batch_size=self.train_args['batch_size'] // config['world_size'],
             shuffle=(self.train_sampler is None), 
-            num_workers=self.train_args['num_workers'])
+            num_workers=self.train_args['num_workers'],
+            sampler=self.train_sampler)
 
         # set loss functions 
         self.adversarial_loss = AdversarialLoss(type=self.config['losses']['GAN_LOSS'])
