@@ -15,8 +15,7 @@ If any part of our paper and repository is helpful to your work, please generous
 ```
 @inproceedings{yan2020sttn,
   author = {Zeng, Yanhong and Fu, Jianlong and Chao, Hongyang,
-  title = {Learning Joint Spatial-Temporal
-Transformations for Video Inpainting},
+  title = {Learning Joint Spatial-Temporal Transformations for Video Inpainting},
   booktitle = {The Proceedings of the European Conference on Computer Vision (ECCV)},
   year = {2020}
 }
