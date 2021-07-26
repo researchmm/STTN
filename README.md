@@ -1,7 +1,7 @@
 # STTN for Video Inpainting
 ![teaser](https://github.com/researchmm/STTN/blob/master/docs/teaser.png?raw=true)
 
-### [Paper](https://arxiv.org/abs/2007.10247) | [Demo](https://www.youtube.com/watch?v=tgiWGdr1SnE&feature=youtu.be) | [Video](https://drive.google.com/file/d/19eKm4AJhIbJAbvXyA-HTQHFdia7XcN6H/view?usp=sharing) | [Slides](https://drive.google.com/file/d/1y09-SLcTadqpuDDLSzFdtr3ymGbjrmyi/view?usp=sharing) |[BibTex](https://github.com/researchmm/STTN#citation)
+### [Paper](https://arxiv.org/abs/2007.10247) | [Project](https://sites.google.com/view/1900zyh/sttn) | [Slides](https://drive.google.com/file/d/1y09-SLcTadqpuDDLSzFdtr3ymGbjrmyi/view?usp=sharing) |[BibTex](https://github.com/researchmm/STTN#citation)
 
 Learning Joint Spatial-Temporal Transformations for Video Inpainting<br>
 
